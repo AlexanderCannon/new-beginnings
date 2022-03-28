@@ -1,0 +1,41 @@
+type Address {
+  line1: String
+  line2: String
+  line3: String
+  postalCode: String
+  town: String
+  country: String
+  county: String
+  isCurrent: Boolean
+  isPrimary: Boolean
+  Customers: [Customer!]! @relationship(type: "LIVED_AT", direction: IN)
+}
+
+type Customer {
+  firstName: String
+  middleNames: String
+  lastName: String
+  dateOfBirth: String
+  phoneNumber: String
+  graphID: ID @id
+  uniqueID: String
+  Addresses: [Address!]! @relationship(type: "LIVED_AT", direction: OUT)
+}
+
+type Mutation {
+  signUp(
+    firstName: String
+    middleNames: String
+    lastName: String
+    dateOfBirth: String
+    phoneNumber: String
+    uniqueID: String
+    line1: String
+    line2: String
+    line3: String
+    postalCode: String
+    town: String
+    country: String
+    county: String
+  ): String!
+}

@@ -1,0 +1,32 @@
+{
+  "name": "new-beginnings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --ext .js --ext .gql ",
+    "dev": "DEBUG=@neo4j/graphql:* nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neo4j/graphql": "^3.0.3",
+    "@neo4j/graphql-ogm": "^3.0.3",
+    "apollo-server": "^3.6.6",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.3.0",
+    "jest": "^27.5.1",
+    "neo4j-driver": "^4.4.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "easygraphql-tester": "^6.0.1",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-graphql": "^4.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15"
+  }
+}
